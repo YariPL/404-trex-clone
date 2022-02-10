@@ -19,7 +19,7 @@
     "cors": "^2.8.5",
     "css-loader": "^3.6.0",
     "express": "^4.17.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.4",
     "stats.js": "^0.17.0",
     "style-loader": "^1.2.1"
