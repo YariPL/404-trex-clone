@@ -27,7 +27,7 @@ export let light;
 export let canvas = document.querySelector("#gameCanvas");
 export let mainLoaded = 0;
 export let add = () => {
-  mainLoaded++;
+  if (mainLoaded < 20) mainLoaded++;
 };
 
 export let collissionDetected = false;
@@ -35,6 +35,10 @@ export let scoreValue = 0;
 export let low = false;
 export let isJump = false;
 export let frame = 0;
+
+setTimeout(() => {
+  if (mainLoaded < 20) mainLoaded = 20;
+}, 4000);
 let scoreValueDisplay = document.querySelector("#scoreValue");
 
 // GLOBAL STATES
