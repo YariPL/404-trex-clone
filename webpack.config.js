@@ -1,7 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   entry: "./js/app.js",
@@ -36,7 +36,9 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: {
+      directory: path.resolve(__dirname, "app"),
+    },
     compress: true,
     port: 9000,
   },
@@ -51,6 +53,7 @@ module.exports = {
         { from: "models", to: "models" },
         { from: "audio", to: "audio" },
       ],
-    })
+    }),
   ],
+  mode: "development",
 };
